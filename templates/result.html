@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Here fishy fishy </title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="static/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="static/vendor/jquery-ui/jquery-ui.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+    <div class="main">
+        
+        <div class="header">
+            <center><img src="static/images/phishing.png" alt="" class="imagecen"></center>
+            <!-- <img src="static/images/dots.png" alt=""> -->
+        </div>
+        <div class="container">
+            <form action = "http://localhost:5000/index" id="booking-form url_form" class="booking-form" method="POST">
+                <div class="form-group">
+                    <div class="form-destination">
+                        <label for="destination">Link</label>
+                        <input type="text" id="destination" name="link" placeholder="https://www.google.com/" />
+                    </div>
+                    
+                    <div class="form-submit">
+                        <input type="submit" id="submit_url" class="submit" value="Check" onclick="JSalert()"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    
+    <script>
+        setTimeout(function JSalert(){ 
+            swal({
+                title: '{{beauty_alert[0]}}',
+                text: '{{beauty_alert[1]}}',
+                icon: '{{beauty_alert[2]}}',
+                });
+        }, 1000);
+    </script>
+    <!-- JS -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+</html>
