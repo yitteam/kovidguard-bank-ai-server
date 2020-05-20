@@ -260,12 +260,12 @@ def get_boxes(boxes, labels, thresh):
 def screenshot(link):
     global name
     # Using pyvirtualdisplay to open selenium in virtual env
-    # try:
-    #     from pyvirtualdisplay import Display
-    # except:
-    #     print('not install pyvirtualdisplay')
-    # display = Display(visible=0, size=(800, 600))
-    # display.start()
+    try:
+        from pyvirtualdisplay import Display
+    except:
+        print('not install pyvirtualdisplay')
+    display = Display(visible=0, size=(800, 600))
+    display.start()
 
     name = link.split("/")
 
@@ -289,7 +289,7 @@ def screenshot(link):
     driver.save_screenshot( 'images/' +name[2] + '/'+filename2 )
     driver.close()
 
-    # display.stop()
+    display.stop()
 #under maintain (check website has password form)
 
 def check_connection(url):
