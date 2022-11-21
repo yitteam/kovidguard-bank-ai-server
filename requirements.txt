@@ -12,7 +12,7 @@ openpyxl==3.0.3
 pandas==1.0.3
 Pillow==7.0.0
 requests==2.23.0
-tensorflow==1.15.0
+tensorflow==2.9.3
 wget==3.2
 selenium==3.141.0
 tensorflow-estimator==1.15.0
